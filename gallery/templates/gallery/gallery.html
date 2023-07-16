@@ -1,0 +1,29 @@
+{% extends 'gallery/index.html' %}
+{% load static %}
+{% block content %}
+    <div>Suche<hr></div>
+    <div class="container">
+    {% for bild in bilder %}
+    {% if forloop.counter0|divisibleby:3 %}
+        <div class="row mt-3">
+        {% endif %}
+            <div class="col-sm-4 mt-3">
+                <div class="card" style="max-width: 20rem;">
+                    {% if bild.bild %}
+                    <img class="card-img-top" src="{{bild.bild.url}}" alt="Card image cap">
+                    {% else %}
+                    <img class="card-img-top" src="{% static 'pics/examples/iPad.jpg' %}" alt="Card image cap">
+                    {% endif %}
+                    <div class="m-2">
+                        <h5>{{ bild.name }}</h5>
+                        <p>{{ bild.beschreibung }}</p>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 or forloop.last %}
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <br><br><br><br>
+{% endblock content %}

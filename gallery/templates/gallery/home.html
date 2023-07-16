@@ -1,0 +1,61 @@
+{% extends 'gallery/index.html' %}
+{% load static %}
+
+{% block content %}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'pics/examples/Atelier.jpg' %}" class="d-block w-100" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'pics/examples/Stifte.jpg' %}" class="d-block w-100" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'pics/examples/Pinsel.jpg' %}" class="d-block w-100" alt="Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'pics/examples/Kreide.jpg' %}" class="d-block w-100" alt="Image 3">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+</div>
+  
+<div class="container mt-3 ">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-3 mb-3">
+      <div class="card" style="width: 14rem;">
+        <img class="card-img-top" src="{% static 'pics/examples/Acryl.jpg' %}" alt="Acrylmalerie">
+        <a href="{% url 'gallery' %}" class="btn btn-primary"><b>Acrylmalerei</b></a>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card" style="width: 14rem;">
+        <img class="card-img-top" src="{% static 'pics/examples/ipad.jpg' %}" alt="Digitale Kunst">
+        <a href="{% url 'gallery' %}" class="btn btn-primary"><b>Digitale Kunst</b></a>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card" style="width: 14rem;">
+        <img class="card-img-top" src="{% static 'pics/examples/Steine.jpg' %}" alt="Naturkunst">
+        <a href="{% url 'gallery' %}" class="btn btn-primary"><b>Naturkunst</b></a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+
+  
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% load static %}
+
+<nav class="container rounded-2 navbar shadow p-2 mt-2 bg-danger">
+    <div class="container-fluid">
+        <a class="navbar-brand link-light" href="{% url 'home' %}">
+             <img src="{% static 'pics/examples/Logo.png' %}" height="120" alt="Logo">
+        </a>
+        <div class="navbar-nav">
+            <div class="d-flex">    
+                <a class="nav-link link-light p-4" href="{% url 'home' %}"> <h3> Home </h3> </a>
+                <a class="nav-link link-light p-4" href="{% url 'gallery' %}"> <h3> Galerie </h3> </a>
+                <a class="nav-link link-light p-4" href="{% url 'contact' %}"> <h3> Kontakt </h3> </a>
+            </div>
+        </div>
+    </div>
+</nav>
