@@ -16,14 +16,6 @@
     ],
     "routes": [
       {
-        "src": "/static/pics/examples/(.*)",
-        "dest": "/static/$1"
-      },
-      {
-        "src": "/static/pics/artworks/(.*)",
-        "dest": "/static/$1"
-      },
-      {
         "src": "/static/(.*)",
         "dest": "/static/$1"
       },
