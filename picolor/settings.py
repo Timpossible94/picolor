@@ -82,6 +82,17 @@ WSGI_APPLICATION = 'picolor.wsgi.app'
 #   }
 #}
 
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rhecfyps',
+        'USER': 'rhecfyps',
+        'PASSWORD': 'ewA-NGmFkNcP4FkeE9sfukFkjA-dr7vA',
+        'HOST': 'trumpet.db.elephantsql.com',
+        'PORT': '5432',
+   }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
